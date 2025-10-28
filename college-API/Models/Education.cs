@@ -22,12 +22,13 @@ namespace college_API.Models
         public string MajorGroup { get; set; }
 
         [Required]
-        public int? YearOfPassing { get; set; }
+        public int YearOfPassing { get; set; }
 
         [Required]
         public double Percentage { get; set; }
 
-        // Foreign key to Student (one-to-many)
+        // Foreign key to Student (one-to-one)
+        [ForeignKey("Student")]
         public int StudentUID { get; set; }
         public Student Student { get; set; }
     }

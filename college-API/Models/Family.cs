@@ -47,6 +47,7 @@ namespace college_API.Models
         public bool IsFirstGraduate { get; set; }
 
         // Foreign key to Student (one-to-one)
+        [ForeignKey("Student")]
         public int StudentUID { get; set; }
         public Student Student { get; set; }
     }

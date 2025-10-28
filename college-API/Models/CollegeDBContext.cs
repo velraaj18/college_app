@@ -10,5 +10,8 @@ namespace college_API.Models
         }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Family> Families { get; set; }
+        public DbSet<Education> Educations { get; set; }
+        public DbSet<Course> Courses { get; set; }
     }
 }

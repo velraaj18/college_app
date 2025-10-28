@@ -17,7 +17,7 @@ namespace college_API.Models
         [StringLength(200)]
         public string Description { get; set; }
 
-        // One-to-many with Student
+        // many-to-many with Student
         public ICollection<Student> Students { get; set; }
     }
 }
