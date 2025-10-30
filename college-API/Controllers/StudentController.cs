@@ -1,4 +1,5 @@
-﻿using college_API.Models;
+﻿using college_API.Data;
+using college_API.Data.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

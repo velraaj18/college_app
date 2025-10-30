@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using college_API.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace college_API.Models
+namespace college_API.Data
 {
     public class CollegeDBContext : DbContext
     {
@@ -13,5 +14,6 @@ namespace college_API.Models
         public DbSet<Family> Families { get; set; }
         public DbSet<Education> Educations { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

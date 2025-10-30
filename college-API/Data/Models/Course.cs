@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
 
-namespace college_API.Models
+namespace college_API.Data.Models
 {
     public class Course
     {
