@@ -1,19 +1,14 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import MobileMenuToggle from "./MobileMenuToggle"; // client component
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         {/* College Logo */}
         <div className="flex items-center space-x-2">
           <Image
-            src="/college-logo.png" // replace with logo file
+            src="/college-logo.png"
             alt="College Logo"
             width={40}
             height={40}
@@ -24,7 +19,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          {["Home", "Courses", "Admissions", "Students", "Contact"].map((item) => (
+          {["Login", "Courses", "Admissions", "Students", "Contact"].map((item) => (
             <a
               key={item}
               href={`/${item.toLowerCase()}`}
@@ -38,7 +33,7 @@ export default function Navbar() {
         {/* Profile */}
         <div className="hidden md:flex items-center space-x-3">
           <Image
-            src="/profile.jpg" // temporary profile picture
+            src="/profile.jpg"
             alt="Profile"
             width={35}
             height={35}
@@ -46,29 +41,9 @@ export default function Navbar() {
           />
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-700"
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Button (Client Component) */}
+        <MobileMenuToggle />
       </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-white border-t shadow-lg">
-          {["Home", "Courses", "Admissions", "Students", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-      )}
     </nav>
   );
 }
