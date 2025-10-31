@@ -1,6 +1,7 @@
 ﻿using college_API.Data;
 using college_API.Data.Models;
 using college_API.DTO;
+using college_API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,15 +13,17 @@ namespace college_API.Controllers
     public class UserController : ControllerBase
     {
         public readonly CollegeDBContext _db;
+        public readonly JWTService _jwt;
 
-        public UserController(CollegeDBContext db)
+        public UserController(CollegeDBContext db, JWTService jwt)
         {
             _db = db;
+            _jwt = jwt;
         }
 
         // Add the user into the Users table with the unique email and hashed password.
         // Register
-        [HttpPost]
+        [HttpPost("register")]
         public IActionResult Register(User user)
         {
             //Check if there is any user already with the same email. If so, don't add the user.
@@ -37,12 +40,15 @@ namespace college_API.Controllers
             _db.Users.Add(user);
             _db.SaveChanges();
 
-            return Ok();
+            // Generate JWT token to authorize the new user for the other APIs and handle session.
+            var token = _jwt.GenerateToken(user.UserName, user.Email, user.PhoneNumber);
+
+            return Ok(new { token, result = new { user.UserUID, user.UserName, user.Email, user.PhoneNumber } });
         }
 
         // Validate the user based on Email and password.
         // Login
-        [HttpGet]
+        [HttpPost("login")]
         public IActionResult Login(UserLogin user)
         {
             var loggedUser = _db.Users.Where(x => x.Email == user.Email).Single();
@@ -56,7 +62,10 @@ namespace college_API.Controllers
             if (password == PasswordVerificationResult.Failed)
                 return Unauthorized(new { Message = "Invalid password (or) password doesn't match email" });
 
-            return Ok();
+            // Generate JWT token to authorize the new user for the other APIs and handle session.
+            var token = _jwt.GenerateToken(loggedUser.UserName, loggedUser.Email, loggedUser.PhoneNumber);
+
+            return Ok(new { token, result = new { loggedUser.UserUID, loggedUser.UserName, loggedUser.Email, loggedUser.PhoneNumber } });
         }
     }
 }
