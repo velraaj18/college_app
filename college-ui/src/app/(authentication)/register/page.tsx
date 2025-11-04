@@ -2,18 +2,17 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { json } from "stream/consumers";
 
 export default function Register() {
   const router = useRouter();
   const [formData, setFormData] = useState({
-    name: "",
+    userName: "",
     email: "",
-    phone: "",
+    phoneNumber: "",
     password: "",
   });
   const [error, setError] = useState("");
-  const apiUrl = "http://localhost:5213"
+  const apiUrl = "http://localhost:5213";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,16 +22,25 @@ export default function Register() {
     e.preventDefault();
     setError("");
     // TODO: Connect your .NET API here
-    await fetch(`${apiUrl}/api/user/register`, {
-      method : "POST",
-      body : JSON.stringify(formData),
-      headers : { "Content-Type": "application/json" },
-    })
-    console.log("Register data:", formData);
+    const response = await fetch(`${apiUrl}/api/user/register`, {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: { "Content-Type": "application/json" },
+    });
 
-    // Simulate success
-    alert("Register clicked! Connect API here.");
-    router.push("/login"); // redirect to login after register
+    if (!response.ok) {
+      const errorData = await response.json();
+      setError(errorData.message);
+    } else {
+      const data = await response.json();
+
+      const { token, result } = data;
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("userData", result);
+
+      router.push("/");
+    }
   };
 
   return (
@@ -47,8 +55,8 @@ export default function Register() {
             </label>
             <input
               type="text"
-              name="name"
-              value={formData.name}
+              name="userName"
+              value={formData.userName}
               onChange={handleChange}
               placeholder="Enter your name"
               required
@@ -76,13 +84,16 @@ export default function Register() {
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="phoneNumber"
+              className="block text-sm font-medium text-gray-700"
+            >
               Phone
             </label>
             <input
               type="text"
-              name="phone"
-              value={formData.phone}
+              name="phoneNumber"
+              value={formData.phoneNumber}
               onChange={handleChange}
               placeholder="Enter your phone"
               className="w-full border rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
