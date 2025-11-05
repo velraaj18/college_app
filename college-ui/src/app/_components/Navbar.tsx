@@ -3,7 +3,7 @@ import MobileMenuToggle from "./MobileMenuToggle"; // client component
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+    <nav className="w-full bg-white shadow-md top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         {/* College Logo */}
         <div className="flex items-center space-x-2">
