@@ -51,7 +51,7 @@ namespace college_API.Controllers
         [HttpPost("login")]
         public IActionResult Login(UserLogin user)
         {
-            var loggedUser = _db.Users.Where(x => x.Email == user.Email).Single();
+            var loggedUser = _db.Users.Where(x => x.Email == user.Email).FirstOrDefault();
             if(loggedUser == null)
             {
                 return Unauthorized(new { Message = "Invalid Email Address"});

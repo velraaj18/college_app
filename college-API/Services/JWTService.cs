@@ -27,8 +27,8 @@ namespace college_API.Services
             // Step 3: Define user claims
             var claims = new Claim[]
             {
-                new Claim(ClaimTypes.Name, name),
-                new Claim(ClaimTypes.Email, email),
+                new Claim("name", name),
+                new Claim("email", email),
                 new Claim("phone", phone)
             };
 
