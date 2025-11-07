@@ -33,8 +33,7 @@ const Login = () => {
       const {token, result} = resultData;
       localStorage.setItem("token", token);
       localStorage.setItem("userData", JSON.stringify(result));
-
-      router.push("/");
+      window.location.href = "/";
     }
   }
   return (

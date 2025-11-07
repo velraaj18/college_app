@@ -1,19 +1,18 @@
-import Image from "next/image";
+"use client"
+
 import MobileMenuToggle from "./MobileMenuToggle"; // client component
+import { UserCircleIcon } from "@heroicons/react/24/solid";
+import { BuildingLibraryIcon } from "@heroicons/react/24/solid";
+import { useAuth } from "../services/AuthContext";
 
 export default function Navbar() {
+  const {user, logout} = useAuth();
   return (
     <nav className="w-full bg-white shadow-md top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         {/* College Logo */}
         <div className="flex items-center space-x-2">
-          <Image
-            src="/college-logo.png"
-            alt="College Logo"
-            width={40}
-            height={40}
-            className="rounded-full"
-          />
+          <BuildingLibraryIcon className="h-6 w-6 text-gray-700"/>
           <h1 className="text-xl font-bold text-gray-800">My College</h1>
         </div>
 
@@ -29,18 +28,13 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-
+        
         {/* Profile */}
         <div className="hidden md:flex items-center space-x-3">
-          <Image
-            src="/profile.jpg"
-            alt="Profile"
-            width={35}
-            height={35}
-            className="rounded-full border border-gray-300"
-          />
+          <UserCircleIcon className="h-6 w-6 text-gray-700" />
+          <span className="text-xl font-bold text-gray-800"> {user? `${user.name}` : "Login"} </span>
+          {user && <button type="button" onClick={logout}>Logout</button>}
         </div>
-
         {/* Mobile Menu Button (Client Component) */}
         <MobileMenuToggle />
       </div>

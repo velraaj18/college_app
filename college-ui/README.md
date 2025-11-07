@@ -20,3 +20,5 @@ And add the extension inside the tsconfig.json file in the include
     ".next\\dev/types/**/*.ts",
     "**/*.d.ts"
   ],
+
+npm install @headlessui/react @heroicons/react —> To install hero icons for the project
