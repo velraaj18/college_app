@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+/* Navbar */
+.headerUtilitybar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    padding: 0 35px;
+    background-color: #fff;
+    /* background-color: var(--color-primary); */
+}
+
+/* Carousel */
+.slide-content {
+  width: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.carousel-arrow {
+  position: absolute !important;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 50% !important;
+  color: white !important;
+  width: 40px;
+  height: 40px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+/* Content Area */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container h2{
+    font-family: "halyard-text", sans-serif;
+    font-weight: bold;
+}
+
