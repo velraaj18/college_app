@@ -22,3 +22,5 @@ And add the extension inside the tsconfig.json file in the include
   ],
 
 npm install @headlessui/react @heroicons/react —> To install hero icons for the project
+
+npm install primereact primeicons —> To install prime react and its icons.

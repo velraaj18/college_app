@@ -5,7 +5,10 @@ import ProtectedRoute from './services/ProtectedRoute'
 const page = () => {
   return (
    <ProtectedRoute>
-    <>Hello</>
+    <>
+      <Navbar/>
+      Hello
+    </>
    </ProtectedRoute>
   )
 }

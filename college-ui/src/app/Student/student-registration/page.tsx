@@ -6,6 +6,7 @@ import FamilyForm from "./components/FamilyForm";
 import EducationForm from "./components/EducationForm";
 import CoursesForm from "./components/CoursesForm";
 import ProtectedRoute from "@/app/services/ProtectedRoute";
+import Navbar from "@/app/_components/Navbar";
 
 const AdmissionPage = () => {
   const [formData, setFormData] = useState<IStudentAdmission>(defaultAdmission);
@@ -41,6 +42,7 @@ const AdmissionPage = () => {
 
   return (
     <ProtectedRoute>
+      <Navbar/>
       <form
         onSubmit={handleSubmit}
         className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg mt-10 space-y-8"
