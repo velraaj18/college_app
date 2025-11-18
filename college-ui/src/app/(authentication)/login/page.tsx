@@ -28,7 +28,7 @@ const Login = () => {
     const resultData = await response.json();
 
     if(!response.ok){
-      setError(resultData);
+      setError(resultData.message || "Login Failed. Please try again");
     } else{
       const {token, result} = resultData;
       localStorage.setItem("token", token);

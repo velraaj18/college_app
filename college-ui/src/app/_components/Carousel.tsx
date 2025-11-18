@@ -5,12 +5,12 @@ import { Carousel } from "primereact/carousel";
 export default function BannerCarousel() {
   const slides = [
     {
-      image: "/images/gettyimages-171271182-612x612.jpg",
+      image: "/images/college1.jpg",
       title: "Welcome to Our College",
       subtitle: "Achieve more with quality education",
     },
     {
-      image: "/images/pexels-ekrulila-2292837.jpg",
+      image: "/images/college3.jpg",
       title: "Modern Campus",
       subtitle: "World-class facilities for students",
     },
@@ -58,7 +58,7 @@ export default function BannerCarousel() {
       numVisible={1}
       numScroll={1}
       itemTemplate={slideTemplate}
-      autoplayInterval={10000}
+      autoplayInterval={7000}
       circular
       showIndicators={false}
       pt={{

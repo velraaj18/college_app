@@ -2,14 +2,14 @@
 
 /* Navbar */
 .headerUtilitybar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 55px;
-    padding: 0 35px;
-    background-color: #fff;
-    /* background-color: var(--color-primary); */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  padding: 0 35px;
+  background-color: #fff;
+  /* background-color: var(--color-primary); */
 }
 
 /* Carousel */
@@ -45,15 +45,41 @@
 
 /* Content Area */
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.container h2{
-    font-family: "halyard-text", sans-serif;
-    font-weight: bold;
+.container h2 {
+  font-family: "halyard-text", sans-serif;
+  font-weight: bold;
 }
 
+/* Content tab menu */
+.contentTab > div > .p-tabmenu > .p-tabmenu-nav > .p-tabmenuitem {
+  padding: 0 35px;
+}
+
+.tabMenuContents > h5 {
+  font-family: cursive;
+}
+
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
+  color: #59ac77;
+  border-color: #59ac77;
+}
+
+.tabContents {
+  max-width: 770px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  color: gray;
+}
+
+.experienceAreaContent> p {
+  font-family: Arial, Helvetica, sans-serif;
+}
