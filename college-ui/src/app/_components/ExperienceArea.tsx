@@ -6,6 +6,7 @@ const ExperienceArea = () => {
       <div className="experienceArea">
         <img src="/images/paper-top.svg" alt="paperTop" className=" w-full" />
         <div className="experienceAreaWrap p-10 bg-[#f3f3f5]">
+
           <div className="container ">
             <div className="flex flex-wrap">
               <div className="colLeft md: w-[35%] pl-4 pr-4 ml-auto">            
@@ -18,11 +19,12 @@ const ExperienceArea = () => {
                 </div>
               </div>
               <div className="colRight md: w-[35%] pl-4 pr-4 mr-auto">
-                <iframe src="https://www.youtube.com/embed/rsyeVes0ME8?si=R_fheJqeNo7uPsru" height="300"  className="experienceAreaVideo w-full"></iframe>
+                <iframe src="https://www.youtube.com/embed/rsyeVes0ME8?si=R_fheJqeNo7uPsru" height="300" title="experienceVideo" className="experienceAreaVideo w-full"></iframe>
               </div>
             </div>
           </div>
         </div>
+        <img src="/images/paper-bottom.png" alt="paperTop" className=" w-full" />
       </div>
     </>
   );
