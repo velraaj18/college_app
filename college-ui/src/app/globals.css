@@ -66,6 +66,12 @@
   font-family: cursive;
 }
 
+.acceptancePageHeader > h5 {
+  font-family: cursive;
+  font-size:  22px;
+  color: #59ac77;
+}
+
 .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
   color: #59ac77;
   border-color: #59ac77;
