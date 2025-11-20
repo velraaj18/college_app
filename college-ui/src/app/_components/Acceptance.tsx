@@ -17,7 +17,7 @@ const Acceptance = () => {
                                 Stanford? Yale? WashU? Navy? Yep, our students get into the most selective schools in the country. But our focus is on helping them develop curiosity, skills, and confidence and then finding the college that's the best fit for them. Every Griffin student gets personalized, proactive guidance to navigate the admissions process to produce college options that work for them. A sampling of colleges who have accepted Griffin grads are below.
                             </p>
                         </div>
-                        <div className='logoCarousal mt-7 w-full max-w-[1180px] mx-auto'>
+                        <div className='logoCarousal mt-14 w-full max-w-[1180px] mx-auto mb-14'>
                             <LogoCarousel/>
                         </div>
                     </div>

@@ -66,7 +66,7 @@
   font-family: cursive;
 }
 
-.acceptancePageHeader > h5 {
+.acceptancePageHeader > h5, .announcementsPageHeader> h5 {
   font-family: cursive;
   font-size:  22px;
   color: #59ac77;
@@ -88,4 +88,9 @@
 
 .experienceAreaContent> p {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.eventCards{
+  max-height: 590px;
 }

@@ -5,6 +5,7 @@ import BannerCarousel from './_components/Carousel'
 import ContentArea from './_components/ContentArea'
 import ExperienceArea from './_components/ExperienceArea';
 import Acceptance from './_components/Acceptance'
+import Announcements from './_components/Announcements'
 
 const page = () => {
   return (
@@ -18,6 +19,7 @@ const page = () => {
       <ContentArea/>
       <ExperienceArea/>
       <Acceptance/>
+      <Announcements/>
     </>
    </ProtectedRoute>
   )
