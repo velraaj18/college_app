@@ -6,6 +6,7 @@ import ContentArea from './_components/ContentArea'
 import ExperienceArea from './_components/ExperienceArea';
 import Acceptance from './_components/Acceptance'
 import Announcements from './_components/Announcements'
+import Highlights from './_components/Highlights'
 
 const page = () => {
   return (
@@ -20,6 +21,7 @@ const page = () => {
       <ExperienceArea/>
       <Acceptance/>
       <Announcements/>
+      <Highlights/>
     </>
    </ProtectedRoute>
   )
