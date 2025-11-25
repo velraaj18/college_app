@@ -19,9 +19,10 @@ const Highlights = () => {
     <div className="flex items-center justify-center px-3">
       <img
         src={item.image}
-        alt="image"
+        alt="highlight"
         className="
-          w-full slide-content object-cover rounded-xl
+          w-full object-cover
+          h-[220px] sm:h-[300px] md:h-[380px] lg:h-[450px]
           transition-all duration-300 ease-[cubic-bezier(.34,1.56,.64,1)]
           hover:scale-105
         "
@@ -33,24 +34,36 @@ const Highlights = () => {
     <>
       <div className="highlights">
         <div className="container">
-          <div className="highlightsPageArea p-10">
-            <div className="highlightsPageHeader">
-              <h2 className="text-center mb-10 text-4xl">Recent Highlights:</h2>
-            </div>
+          <div className="p-10">
+            <h2 className="text-center mb-10 text-4xl">Recent Highlights:</h2>
           </div>
         </div>
 
-        <div className="w-full">
+        <div className="w-full mx-auto relative">
           <Carousel
-            itemTemplate={itemTemplate}
             value={items}
+            itemTemplate={itemTemplate}
             numVisible={3}
+            numScroll={3}
             circular
             showIndicators={false}
-            // pt={{
-            //   previousButton: { className: "carousel-arrow left-arrow" },
-            //   nextButton: { className: "carousel-arrow right-arrow" },
-            // }}
+            pt={{
+              previousButton: {
+                className: "carousel-arrow left-arrow",
+                onClick: (e) => e.stopPropagation(),
+              },
+              nextButton: {
+                className: "carousel-arrow right-arrow",
+                onClick: (e) => e.stopPropagation(),
+              },
+
+              previousButtonIcon: {
+                className: "custom-prev-icon",
+              },
+              nextButtonIcon: {
+                className: "custom-next-icon",
+              },
+            }}
           />
         </div>
       </div>

@@ -94,3 +94,27 @@
 .eventCards{
   max-height: 590px;
 }
+
+/* Hide the default PrimeReact SVG icons */
+.custom-prev-icon,
+.custom-next-icon {
+  display: none !important;
+}
+
+/* Add your own images inside the buttons */
+.carousel-arrow::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.left-arrow::after {
+  background-image: url('/images/carouselprev.png');
+}
+
+.right-arrow::after {
+  background-image: url('/images/carouselnext.png');
+}
