@@ -118,3 +118,7 @@
 .right-arrow::after {
   background-image: url('/images/carouselnext.png');
 }
+
+.footerWrap{
+  background-color: #34353A;
+}

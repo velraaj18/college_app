@@ -6,16 +6,18 @@ const EventCards = () => {
     <img
       src="/images/781a6dc248827a0077d92b111c9b4243.png"
       alt="card"
-      className="w-full h-full object-cover transition-all duration-300 ease-out hover:-translate-y-2"
+      className="w-full h-full object-cover transition-all duration-300 ease-[cubic-bezier(.34,1.56,.64,1)] hover:scale-105"
     />
   );
   const cardFooter = (
-    <button
-      title="button"
-      className="bg-[#6CA643] p-1 ps-2 pe-2 text-white text-[12px] font-bold"
-    >
-      Sign Up
-    </button>
+    <div>
+      <button
+        title="button"
+        className="bg-[#6CA643] p-1 ps-2 pe-2 text-white text-[12px] font-bold"
+      >
+        Sign Up
+      </button>
+    </div>
   );
 
   return (

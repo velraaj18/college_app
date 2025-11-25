@@ -7,6 +7,7 @@ import ExperienceArea from './_components/ExperienceArea';
 import Acceptance from './_components/Acceptance'
 import Announcements from './_components/Announcements'
 import Highlights from './_components/Highlights'
+import Footer from './_components/Footer'
 
 const page = () => {
   return (
@@ -22,6 +23,8 @@ const page = () => {
       <Acceptance/>
       <Announcements/>
       <Highlights/>
+      <br/>
+      <Footer/>
     </>
    </ProtectedRoute>
   )

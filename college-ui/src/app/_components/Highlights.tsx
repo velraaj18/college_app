@@ -32,7 +32,7 @@ const Highlights = () => {
 
   return (
     <>
-      <div className="highlights">
+      <div className="highlights mb-14">
         <div className="container">
           <div className="p-10">
             <h2 className="text-center mb-10 text-4xl">Recent Highlights:</h2>
