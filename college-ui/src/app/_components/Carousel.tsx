@@ -19,12 +19,12 @@ export default function BannerCarousel() {
       title: "Experienced Faculty",
       subtitle: "Learn from the best educators",
     },
-     {
+    {
       image: "/images/pexels-expressivestanley-1454360.jpg",
       title: "Experienced Faculty",
       subtitle: "Learn from the best educators",
     },
-     {
+    {
       image: "/images/pexels-pixabay-159844.jpg",
       title: "Experienced Faculty",
       subtitle: "Learn from the best educators",
@@ -33,7 +33,7 @@ export default function BannerCarousel() {
       image: "/images/pexels-olly-3768126.jpg",
       title: "Modern Campus",
       subtitle: "World-class facilities for students",
-    }
+    },
   ];
 
   const slideTemplate = (item: any) => {
@@ -67,9 +67,18 @@ export default function BannerCarousel() {
         item: { className: "h-[750px]" },
         previousButton: {
           className: "carousel-arrow left-arrow",
+          onClick: (e) => e.stopPropagation(),
         },
         nextButton: {
           className: "carousel-arrow right-arrow",
+          onClick: (e) => e.stopPropagation(),
+        },
+
+        previousButtonIcon: {
+          className: "custom-prev-icon",
+        },
+        nextButtonIcon: {
+          className: "custom-next-icon",
         },
       }}
     />
