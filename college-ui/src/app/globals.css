@@ -147,8 +147,23 @@
 
 .footerSns {
   background-image: url("/images/footer-socials-holder.svg");
-  height: 143px;
-  padding: 44px 0 0 0;
+  height: 112px;
+  padding: 34px 0 0 0;
   background-size: contain;
   text-align: center;
+}
+
+.socialsLinks.socialmedium a {
+    font-size: 20px;
+}
+.socialsLinks a[href=''] {
+    display: none;
+}
+.socialsLinks a[href=''] {
+    display: none;
+}
+
+.socialsLinks a {
+    margin: 0 5px;
+    color: white;
 }

@@ -29,13 +29,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-dyZ88mC6Up2uqS4h/KyqX..."
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthProvider>         
-          {children}
-        </AuthProvider>
-        
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

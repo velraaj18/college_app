@@ -11,11 +11,11 @@ export default function Navbar() {
   const menu = useRef<Menu>(null);
 
   const menuItems = [
-    { label: "Home", icon: "pi pi-home", url: "/" },
-    { label: "Courses", icon: "pi pi-book", url: "/courses" },
-    { label: "Admissions", icon: "pi pi-id-card", url: "/admissions" },
-    { label: "Students", icon: "pi pi-users", url: "/students" },
-    { label: "Contact", icon: "pi pi-envelope", url: "/contact" },
+    { label: "About", icon: "pi pi-home", url: "/" },
+    { label: "School Programs", icon: "pi pi-book", url: "/courses" },
+    { label: "Community Life", icon: "pi pi-id-card", url: "/admissions" },
+    { label: "Admissions", icon: "pi pi-users", url: "/students" },
+    { label: "Giving", icon: "pi pi-envelope", url: "/contact" },
   ];
 
   const profileMenu = [
@@ -45,7 +45,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-10">
               {menuItems.map((item) => (
                 <a key={item.label} href={item.url} className="">
-                  <span className="hover:text-blue-600 text-gray-600 text-lg uppercase">
+                  <span className="hover:text-[#6ca643] text-[#757782] text-lg uppercase">
                     {item.label}
                   </span>
                 </a>

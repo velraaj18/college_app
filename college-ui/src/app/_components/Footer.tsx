@@ -50,13 +50,152 @@ const Footer = () => {
             </div>
             <div className="footerInner4 md:w-1/4">
               <div className="md:pl-16">
-                <div className="footerSns xl:pl-16">
-                  <h5>Check us out on</h5>
+                <div className="footerSns">
+                  <h5 className="text-white">Check us out on</h5>
+                  <div className="footerSocials">
+                    <div className="socialsLinks socialmedium center">
+                      <a
+                        href="https://www.facebook.com/griffinschoolatx"
+                        target="_blank"
+                        aria-label="Griffin School Facebook"
+                      >
+                        <i className="fab fa-facebook"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School Pinterest"
+                      >
+                        <i className="fab fa-pinterest"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School LinkedIn"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                      <a
+                        href="https://www.youtube.com/@griffinschool1440/playlists"
+                        target="_blank"
+                        aria-label="Griffin School Youtube"
+                      >
+                        <i className="fab fa-youtube"></i>
+                      </a>
+                      <a
+                        href="https://www.instagram.com/griffinschool/"
+                        target="_blank"
+                        aria-label="Griffin School Instagram"
+                      >
+                        <i className="fab fa-instagram"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School Behance"
+                      >
+                        <i className="fab fa-behance"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School Sound Cloud"
+                      >
+                        <i className="fab fa-soundcloud"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School Twitter"
+                      >
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School TikTok"
+                      >
+                        <i className="fab fa-tiktok"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School Snapchat"
+                      >
+                        <i className="fab fa-snapchat"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School Vimeo"
+                      >
+                        <i className="fab fa-vimeo"></i>
+                      </a>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Griffin School Tumblr"
+                      >
+                        <i className="fab fa-tumblr"></i>
+                      </a>
+                      <a
+                        href="https://www.flickr.com/photos/griffinschool/"
+                        target="_blank"
+                        aria-label="Griffin School Flickr"
+                      >
+                        <i className="fab fa-flickr"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <img src="images/footer-line.svg" alt="" />
+          <div className="footerSecondary flex items-center justify-between py-6 gap-3">
+            <div className="footerCopyright text-white text-sm">
+              <p>© Copyright 2025 Griffin School, All Rights Reserved</p>
+            </div>
+            <div className="footerPolicy mr-auto  text-[#6ca643] text-sm">
+              <p>
+                <a
+                  title="Non-Discrimination Statement"
+                  href="/Non-Discrimination-Statement"
+                  className="underline"
+                >
+                  Non-Discrimination Statement
+                </a>{" "}
+                |&nbsp;
+                <a
+                  title="Privacy Policy"
+                  href="/Privacy-Policy"
+                  className="underline"
+                >
+                  Privacy Policy
+                </a>
+                &nbsp;|&nbsp;
+                <a
+                  title="Terms of Service"
+                  href="/Terms-Conditions"
+                  className="underline"
+                >
+                  Terms &amp; Conditions
+                </a>
+              </p>
+            </div>
+            <div className="footerPoweredBy ">
+              <p className="text-white text-sm">
+                Powered by{" "}
+                <a
+                  title="Terms of Service"
+                  href="/Terms-Conditions"
+                  className="underline text-[#6ca643] text-sm"
+                >
+                  Morweb.org
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

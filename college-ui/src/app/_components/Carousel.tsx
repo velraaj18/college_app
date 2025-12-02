@@ -5,32 +5,32 @@ import { Carousel } from "primereact/carousel";
 export default function BannerCarousel() {
   const slides = [
     {
-      image: "/images/college1.jpg",
+      image: "/images/Carousal.jpg",
       title: "Welcome to Our College",
       subtitle: "Achieve more with quality education",
     },
     {
-      image: "/images/college3.jpg",
+      image: "/images/Carousal1.jpg",
       title: "Modern Campus",
       subtitle: "World-class facilities for students",
     },
     {
-      image: "/images/pexels-anastasiya-gepp-654466-1462630.jpg",
+      image: "/images/Carousal2.jpg",
       title: "Experienced Faculty",
       subtitle: "Learn from the best educators",
     },
     {
-      image: "/images/pexels-expressivestanley-1454360.jpg",
+      image: "/images/Carousal3.jpg",
       title: "Experienced Faculty",
       subtitle: "Learn from the best educators",
     },
     {
-      image: "/images/pexels-pixabay-159844.jpg",
+      image: "/images/Carousal.jpg",
       title: "Experienced Faculty",
       subtitle: "Learn from the best educators",
     },
     {
-      image: "/images/pexels-olly-3768126.jpg",
+      image: "/images/Carousal1.jpg",
       title: "Modern Campus",
       subtitle: "World-class facilities for students",
     },
