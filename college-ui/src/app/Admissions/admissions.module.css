@@ -1,0 +1,5 @@
+.admissionCarousal {
+    background: url('/images/AdmissionImage.jpg') no-repeat ;
+    background-size: cover;
+    height: 600px;
+}

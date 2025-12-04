@@ -11,11 +11,83 @@ export default function Navbar() {
   const menu = useRef<Menu>(null);
 
   const menuItems = [
-    { label: "About", icon: "pi pi-home", url: "/" },
-    { label: "School Programs", icon: "pi pi-book", url: "/courses" },
-    { label: "Community Life", icon: "pi pi-id-card", url: "/admissions" },
-    { label: "Admissions", icon: "pi pi-users", url: "/students" },
-    { label: "Giving", icon: "pi pi-envelope", url: "/contact" },
+    {
+      label: "About",
+      url: "/",
+      icon: "pi pi-home",
+      hoverImage: "/images/mm-hover1.svg",
+      children: [
+        {
+          label: "Mission & Values",
+          url: "/courses/primary",
+          icon: "pi pi-send",
+        },
+        { label: "Belonging", url: "/courses/secondary", icon: "pi pi-star" },
+        {
+          label: "Faculty & staff",
+          url: "/courses/sports",
+          icon: "pi pi-chart-bar",
+        },
+      ],
+    },
+
+    {
+      label: "School Programs",
+      icon: "pi pi-book",
+      hoverImage: "/images/mm-hover2.svg",
+      children: [
+        { label: "Academics", url: "/courses/primary", icon: "pi pi-send" },
+        {
+          label: "Arts & Creativity",
+          url: "/courses/secondary",
+          icon: "pi pi-star",
+        },
+        {
+          label: "Athletics",
+          url: "/courses/sports",
+          icon: "pi pi-chart-bar",
+        },
+      ],
+    },
+
+    {
+      label: "Community Life",
+      url: "/admissions",
+      icon: "pi pi-id-card",
+      hoverImage: "/images/mm-hover3.svg",
+      children: [
+        { label: "Academics", url: "/courses/primary", icon: "pi pi-send" },
+        { label: "Arts & Creativity", url: "/courses/secondary", icon: "pi pi-star" },
+        {
+          label: "Athletics",
+          url: "/courses/sports",
+          icon: "pi pi-chart-bar",
+        },
+      ],
+    },
+
+    {
+      label: "Admissions",
+      url: "/Admissions",
+      icon: "pi pi-users",
+      hoverImage: "/images/mm-hover4.svg",
+    },
+
+    {
+      label: "Giving",
+      url: "/contact",
+      icon: "pi pi-envelope",
+      hoverImage: "/images/mm-hover5.svg",
+      children: [
+        { label: "Academics", url: "/courses/primary", icon: "pi pi-send" },
+        { label: "Arts & Creativity", url: "/courses/secondary", icon: "pi pi-star" },
+        {
+          label: "Athletics",
+          url: "/courses/sports",
+          icon: "pi pi-chart-bar",
+        },
+      ],
+    },
   ];
 
   const profileMenu = [
@@ -41,15 +113,58 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="w-2/4 flex items-center justify-around">
-            <div className="hidden md:flex items-center gap-10">
-              {menuItems.map((item) => (
-                <a key={item.label} href={item.url} className="">
-                  <span className="hover:text-[#6ca643] text-[#757782] text-lg uppercase">
-                    {item.label}
-                  </span>
-                </a>
-              ))}
+          <div className="w-2/4 header-menu h-20 justify-around items-center flex">
+            <div className="hidden menu-items h-full md:flex items-center gap-10">
+              {menuItems.map((item) => {
+                const hoverStyle: React.CSSProperties = item.hoverImage
+                  ? { ["--hover-bg" as any]: `url(${item.hoverImage})` }
+                  : {};
+
+                return (
+                  <div
+                    key={item.label}
+                    className="relative group cursor-pointer flex items-center h-full nav-item"
+                    style={hoverStyle}
+                  >
+                    {/* Parent Menu Item */}
+                    {item.children ? (
+                      <div className="nav-parent flex items-center h-full gap-2">
+                        <span className="text-[#757782] text-lg uppercase">
+                          {item.label}
+                        </span>
+                      </div>
+                    ) : (
+                      <a
+                        href={item.url}
+                        className="nav-parent flex items-center h-full gap-2"
+                      >
+                        <span className="hover:text-[#6ca643] text-[#757782] text-lg uppercase">
+                          {item.label}
+                        </span>
+                      </a>
+                    )}
+
+                    {/* Dropdown */}
+                    {item.children && (
+                      <div className="absolute left-0 top-full w-56 bg-white shadow-lg hidden group-hover:block z-50">
+                        {item.children.map((child) => (
+                          <div
+                            className="border-b border-[#dadbe0]"
+                            key={child.label}
+                          >
+                            <a
+                              href={child.url}
+                              className="flex items-center gap-2 px-4 py-2 text-[#757782] uppercase hover:bg-gray-100 hover:text-[#6ca643]"
+                            >
+                              {child.label}
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             {/* Profile Dropdown (desktop) */}

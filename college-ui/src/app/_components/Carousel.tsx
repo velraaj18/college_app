@@ -28,7 +28,7 @@ export default function BannerCarousel() {
       image: "/images/Carousal.jpg",
       title: "Experienced Faculty",
       subtitle: "Learn from the best educators",
-    },
+    },  
     {
       image: "/images/Carousal1.jpg",
       title: "Modern Campus",
