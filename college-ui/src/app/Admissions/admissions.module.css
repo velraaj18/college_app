@@ -41,12 +41,55 @@
 .content1{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
 .content1Left{
-    background: url("/images/admission1.jpg") center center no-repeat;
+    background: url("/images/admisison1.jpg") center center no-repeat;
     background-size: cover;
+    height: 687px;
+    width: 950px;
+}
+
+.content1RightContainer{
+  flex: 1;
+  margin: 0 auto;
+  margin-left: 0;
+  max-width: 570px;
+}
+
+.content1Right {
+    padding: 80px 15px 50px 80px;
+}
+
+.content2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.content2LeftContainer{
+  flex: 1;
+}
+
+.content2Left {
+    padding: 80px 80px 50px 15px;
+    max-width: 570px;
+    margin: 0 auto;
+    margin-right: 0;
+}
+
+.content2Right {
+    flex: 1;
+    background: url("/images/admission2.jpg") center center no-repeat;
+    background-size: cover;
+    height: 687px;
+    min-width: 300px; /* allows wrapping on small screens */
+}
+
+.content3{
+  background-color: #F3F3F5;
 }
