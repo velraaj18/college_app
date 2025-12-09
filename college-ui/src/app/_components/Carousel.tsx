@@ -45,7 +45,7 @@ export default function BannerCarousel() {
         <div className="absolute inset-0 bg-opacity-40"></div>
 
         <div className="relative z-10 text-center text-white px-4">
-          <h2 className="text-3xl md:text-5xl font-bold">{item.title}</h2>
+          <h2 className="text-3xl text-white! md:text-5xl font-bold">{item.title}</h2>
           <p className="text-lg md:text-2xl mt-2">{item.subtitle}</p>
         </div>
       </div>

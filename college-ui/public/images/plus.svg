@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
+  <defs>
+    <filter id="Ellipse_25" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_17765" data-name="Group 17765" transform="translate(-1101 -2630)">
+    <g transform="matrix(1, 0, 0, 1, 1101, 2630)" filter="url(#Ellipse_25)">
+      <circle id="Ellipse_25-2" data-name="Ellipse 25" cx="25" cy="25" r="25" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="Group_17764" data-name="Group 17764" transform="translate(0 189.161)">
+      <g id="Group_17762" data-name="Group 17762" transform="translate(1122 2469.212)">
+        <path id="Path_36056" data-name="Path 36056" d="M325.459,81.33A35.4,35.4,0,0,0,320,81.08c-2.731.068-5.461.137-8.191.256s-5.459.25-8.186.461a1.991,1.991,0,1,1-.028-3.965c1.825.153,3.649.273,5.473.374,3.644.21,7.292.342,10.94.453a35.565,35.565,0,0,0,5.471-.213,1.458,1.458,0,1,1-.02,2.885Z" transform="translate(-301.437 -77.824)" fill="#6ca643"/>
+      </g>
+      <g id="Group_17761" data-name="Group 17761" transform="translate(1133.166 2459.839)">
+        <path id="Path_36057" data-name="Path 36057" d="M388.905,7.658a19.847,19.847,0,0,1,.979,5.4,39.1,39.1,0,0,1-.093,5.386c-.255,3.239-.59,7.711-.9,10.9a1.11,1.11,0,0,1-2.21-.209c.156-1.783.186-3.6.182-5.392a36.023,36.023,0,0,0-.281-5.364c-.2-1.335-.5-2.658-.6-4a19.454,19.454,0,0,1-.023-2.642,13.5,13.5,0,0,1,.775-4.119,1.172,1.172,0,0,1,2.174.036Z" transform="translate(-385.923 -6.907)" fill="#6ca643"/>
+      </g>
+    </g>
+  </g>
+</svg>

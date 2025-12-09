@@ -71,7 +71,9 @@ const MissionValues = () => {
         <Spacer/>
 
         <div className="content-area content-style bg-[#F3F3F5]">
-          <div className="container max-w-[1080px]"></div>
+          <div className="container max-w-[1080px]">
+            <h2 className="text-center">Griffin School Profile</h2>
+          </div>
         </div>
       </main>
     </>
