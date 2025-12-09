@@ -11,7 +11,7 @@ import Footer from './_components/Footer'
 
 const page = () => {
   return (
-   <ProtectedRoute>
+   
     <>
       <Navbar/>
       <div className='pt-32'>
@@ -26,7 +26,7 @@ const page = () => {
       <br/>
       <Footer/>
     </>
-   </ProtectedRoute>
+   
   )
 }
 

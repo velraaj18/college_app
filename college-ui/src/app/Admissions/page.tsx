@@ -3,6 +3,7 @@ import Navbar from "../_components/Navbar";
 import styles from "./admissions.module.css";
 import Spacer from "../_components/Spacer";
 import Footer from "../_components/Footer";
+import AdmissionTabMenu from "./_components/AdmissionTabMenu";
 
 const AdmissionPage = () => {
   return (
@@ -33,7 +34,9 @@ const AdmissionPage = () => {
           <div className={styles.content1Left}></div>
           <div className={styles.content1RightContainer}>
             <div className={styles.content1Right}>
-              <h2 className=" text-[32px] font-bold mb-5">Come Check us Out!</h2>
+              <h2 className=" text-[32px] font-bold mb-5">
+                Come Check us Out!
+              </h2>
               <p className="para">
                 We are thrilled that you are considering Griffin School for your
                 high school experience and look forward to connecting! The best
@@ -59,7 +62,9 @@ const AdmissionPage = () => {
         <div className={`${styles.content2} mt-7`}>
           <div className={styles.content2LeftContainer}>
             <div className={styles.content2Left}>
-              <h2 className=" text-[32px] font-bold mb-5">Application Process</h2>
+              <h2 className=" text-[32px] font-bold mb-5">
+                Application Process
+              </h2>
               <p className="para">
                 We are thrilled that you are considering Griffin School for your
                 high school experience and look forward to connecting! The best
@@ -80,19 +85,56 @@ const AdmissionPage = () => {
           </div>
           <div className={styles.content2Right}></div>
         </div>
-        <Spacer/>
+        <Spacer />
 
         <div className={`${styles.content3} mt-7`}>
-          <div className="container max-w-[1080px]">
-            <h2 className="text-[32px]">The application portal for 2026-27 will open in late September:</h2>
+          <div className="container max-w-[1080px] p-10">
+            <h2 className="text-[32px]">
+              The application portal for 2026-27 will open in late September:
+            </h2>
             <br />
             <h2 className="text-[32px]">Four Easy Steps to Apply:</h2>
+            <div className="mt-7 mb-7">
+              <AdmissionTabMenu />
+            </div>
+            <hr className="text-gray-600" />
+            <p className="mt-7 text-[18px] italic">This might sound like a lot, but it is really a pretty straight-forward and simple process that can be completed in a few days if needed. Just give us a call and our Admissions Director will walk you through the application process.</p>
           </div>
         </div>
-        <Spacer/>
+        <Spacer />
 
+        <div className={`${styles.content1}`}>
+          <div className={styles.content4Left}></div>
+          <div className={styles.content1RightContainer}>
+            <div className={styles.content1Right}>
+              <h2 className=" text-[32px] font-bold mb-5">
+                Tuition
+              </h2>
+              <p className="para">
+                We know Griffin School represents a significant investment in your student's future. We're eager to help families work through the financial barriers that can arise when considering private school expenses. Let us work with you on the options that are available. Various tuition payment plans are offered and families with financial need may apply for financial aid by completing an online financial aid application. For specific information about current tuition rates, payment schedules, and financial aid, download a tuition flyer below.
+              </p>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <Spacer />
+
+        <div className={`${styles.content2} mt-7`}>
+          <div className={styles.content2LeftContainer}>
+            <div className={styles.content2Left}>
+              <h2 className=" text-[32px] font-bold mb-5">
+                International Students
+              </h2>
+              <p className="para">
+                Griffin School welcomes international student applicants who would like to study in the United States. We are approved to provide I-20 forms for accepted international students seeking to apply for an F-1 Student Visa. The best way to begin the process is by completing the online application, and emailing us to schedule an online interview. Applicants should submit grade reports (translated into English), and results of an English proficiency exam such as the IELTS or TOEFL to admissions@griffinschool.org. In addition to tuition, international students pay an International Student Fee of $1125. If you are interested in starting an application as an international student, please contact our admissions office at 512-454-5797, email admissions@griffinschool.org, or contact us through our website form.
+              </p>
+            </div>
+          </div>
+          <div className={styles.content5Right}></div>
+        </div>
+        <Spacer />
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 };

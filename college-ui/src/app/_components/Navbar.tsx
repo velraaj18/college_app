@@ -19,7 +19,7 @@ export default function Navbar() {
       children: [
         {
           label: "Mission & Values",
-          url: "/courses/primary",
+          url: "/mission-values",
           icon: "pi pi-send",
         },
         { label: "Belonging", url: "/courses/secondary", icon: "pi pi-star" },

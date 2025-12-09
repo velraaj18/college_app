@@ -93,3 +93,18 @@
 .content3{
   background-color: #F3F3F5;
 }
+
+.content4Left{
+    background: url("/images/Admission4.jpeg") center center no-repeat;
+    background-size: cover;
+    height: 687px;
+    width: 950px;
+}
+
+.content5Right {
+    flex: 1;
+    background: url("/images/Admission5.jpg") center center no-repeat;
+    background-size: cover;
+    height: 687px;
+    min-width: 300px; /* allows wrapping on small screens */
+}

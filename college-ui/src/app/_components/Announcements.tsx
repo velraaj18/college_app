@@ -19,7 +19,7 @@ const Announcements = () => {
               <div className='max-w-[1080px] mx-auto mb-14'>
                 <EventCards/>
               </div>
-              <div className='max-w-[1280px] flex mt-5 mb-10'>
+              <div className='max-w-7xl flex mt-5 mb-10'>
                 <img src="images/icon-full-calendar2.svg" alt="" className='ml-auto'/>
               </div>
             </div>

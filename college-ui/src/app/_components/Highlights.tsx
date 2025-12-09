@@ -20,12 +20,7 @@ const Highlights = () => {
       <img
         src={item.image}
         alt="highlight"
-        className="
-          w-full object-cover
-          h-[220px] sm:h-[300px] md:h-[380px] lg:h-[450px]
-          transition-all duration-300 ease-[cubic-bezier(.34,1.56,.64,1)]
-          hover:scale-105
-        "
+        className="w-full object-cover h-[220px] sm:h-[300px] md:h-[380px] lg:h-[450px] transition-all duration-300 ease-[cubic-bezier(.34,1.56,.64,1)] hover:scale-105"
       />
     </div>
   );

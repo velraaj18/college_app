@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+body{
+  box-sizing: border-box;
+  color: #757782;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #34353A;
+}
+
 .spacer{
   height: 60px;
 }
