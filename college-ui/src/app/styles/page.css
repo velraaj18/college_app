@@ -113,3 +113,32 @@
   margin-right: 10px;
   color: inherit;
 }
+
+.accordion h6 {
+  font-size: 32px;
+}
+
+.p-accordion-tab-active .accordionImg {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.accordion .accordionImg{
+  transition: ease-in-out 500ms; 
+}
+
+.missionAccordion .p-accordion-header-link:before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #6CA643;
+    background-color: transparent;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: ease-in-out 500ms;
+}
+

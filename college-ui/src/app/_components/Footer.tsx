@@ -19,7 +19,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="footerInner2 footerContent md:w-1/6 xl:ml-[8.333%]">
-              <h6 className="text-lg font-bold mb-5">Contact Us</h6>
+              <h6 className="text-lg text-white! font-bold mb-5">Contact Us</h6>
               <p>
                 5001 Evans Ave.
                 <br /> Austin, TX 78751
@@ -41,7 +41,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="footerInner3 footerContent md:w-1/6 xl:ml-[8.333%]">
-              <h6 className="text-lg font-bold mb-5">Quick Links</h6>
+              <h6 className="text-lg text-white! font-bold mb-5">Quick Links</h6>
               <ul className="footerList">
                 <li>Admissions</li>
                 <li>Upcoming Events</li>
@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="footerInner4 md:w-1/4">
               <div className="md:pl-16">
                 <div className="footerSns">
-                  <h5 className="text-white">Check us out on</h5>
+                  <h5 className="text-white!">Check us out on</h5>
                   <div className="footerSocials">
                     <div className="socialsLinks socialmedium center">
                       <a

@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./mission-values.module.css";
 import Navbar from "../_components/Navbar";
 import Spacer from "../_components/Spacer";
+import CustomAccordian from "./_components/Accordian";
+import Footer from "../_components/Footer";
 
 const MissionValues = () => {
   return (
@@ -73,8 +75,25 @@ const MissionValues = () => {
         <div className="content-area content-style bg-[#F3F3F5]">
           <div className="container max-w-[1080px]">
             <h2 className="text-center">Griffin School Profile</h2>
+            <CustomAccordian/>
           </div>
         </div>
+
+        <div className="content-area content-style">
+          <div className="container max-w-[1080px]">
+            <div className="flex">
+              <div className="basis-1/4">
+                <img src="/images/mission3.jpg" alt="" />
+              </div>
+              <div className="basis-3/4">
+                <h2>Accreditation</h2>
+                <p>Griffin School is fully accredited by the Texas Alliance of Accredited Private Schools under the auspices of the Texas Education Agency. Accreditation status assures that our curriculum, instruction, school resources, faculty and staff meet or exceed high standards of excellence and that our academic transcript is respected by colleges and universities across the country and overseas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Footer/>
       </main>
     </>
   );
