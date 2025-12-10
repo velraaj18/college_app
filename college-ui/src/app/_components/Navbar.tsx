@@ -22,7 +22,7 @@ export default function Navbar() {
           url: "/mission-values",
           icon: "pi pi-send",
         },
-        { label: "Belonging", url: "/courses/secondary", icon: "pi pi-star" },
+        { label: "Belonging", url: "/belonging", icon: "pi pi-star" },
         {
           label: "Faculty & staff",
           url: "/courses/sports",

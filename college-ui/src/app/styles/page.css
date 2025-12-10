@@ -31,10 +31,17 @@
   padding: 45px 45px 30px 45px;
 }
 
-.content-style h2 {
+.content-style h2{
+    font-size: 38px;
+}
+
+.content-style h3{
+  font-size: 32px;
+}
+
+.content-style h1, .content-style h2 ,.content-style h3,.content-style h4,.content-style h5,.content-style h6 {
   margin-top: 0;
   margin-bottom: 30px;
-  font-size: 38px;
   line-height: 1.2;
   font-weight: 700;
   font-family: "halyard-text", sans-serif;
@@ -66,11 +73,22 @@
 .two-col-right {
   width: 50%;
   height: 100%;
+  
+}
+
+.two-col-left-content {
   max-width: 570px;
+  padding: 80px 80px 50px 15px;
+  margin-left: auto;
 }
 
 .two-col-right-content {
   padding: 80px 15px 50px 80px;
+  max-width: 570px;
+}
+
+.two-col-right-image {
+  min-height: 550px;
 }
 
 .content-style ul,
@@ -123,22 +141,21 @@
   transform: rotate(135deg);
 }
 
-.accordion .accordionImg{
-  transition: ease-in-out 500ms; 
+.accordion .accordionImg {
+  transition: ease-in-out 500ms;
 }
 
 .missionAccordion .p-accordion-header-link:before {
-    content: "";
-    position: absolute;
-    top: 55%;
-    left: 0px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid #6CA643;
-    background-color: transparent;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    transition: ease-in-out 500ms;
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #6ca643;
+  background-color: transparent;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: ease-in-out 500ms;
 }
-
